@@ -11,10 +11,9 @@
     <body>
         <main>
             <div class="main-container">
-                <button type="button" class="btn btn-primary">Primary</button>
                 <form action="" method="GET">
-                    <label for="operation">Choose operation :
-                        <select name="operation" id="operation">
+                    <label for="operation" class="form-label">Choose operation :
+                        <select name="operation" class="form-select" id="operation">
                             <option value=''>Select Operation</option>
                             <option value='add'>Addition</option>
                             <option value='subtract'>Subtraction</option>
@@ -22,13 +21,17 @@
                             <option value='divide'>Division</option>
                         </select></br>
                     </label>
-                    <label for="firstNumber">First Number:
-                        <input type="number" id="firstNumber" name="firstNumber" placeholder="First number"></br>
-                    </label>
-                    <label for="secondNumber">Second Number:
-                        <input type="number" id="secondNumber" name="secondNumber" placeholder="Second number"></br>
-                    </label>
-                    <button type="button" id="submit" name="submit" onclick="calculate()">Calculate</button>
+                    <div>
+                        <label for="firstNumber" class="form-label">First Number:
+                            <input type="number" class="form-control" id="firstNumber" name="firstNumber" placeholder="First number" ></br>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="secondNumber" class="form-label">Second Number:
+                            <input type="number" class="form-control" id="secondNumber" name="secondNumber" placeholder="Second number"></br>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="submit" name="submit" onclick="calculate()">Calculate</button>
                 </form>
             </div>
         </main>
