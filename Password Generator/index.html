@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="counter.js" defer></script>
-    <title>Counter</title>
+    <script src="password.js" defer></script>
+    <title>Password</title>
 </head>
     <body>
+        <div>
+            <div> 
+                <h1>Your Password is:</h1>
+                <h1 id="password"></h1>
+                <h1 id="charNum"></h1>
+            </div>
+            <div>
+
+                <label for="customRange1" class="form-label">Example range</label>
+                <input type="range" class="form-range" id="customRange1" min="4" max="20"  value='20' >
+
+            </div>
+            <div class="form-check">
+                <form >
+                    <input type="checkbox" id="uppercaseEl" >
+                    <label for="capitalLetters"> Include CAPITAL LETTERS</label><br>
+
+                    <input type="checkbox" id="lowercaseEl" >
+                    <label for="lowercaseLetters">include lowercase letters</label><br>
+
+                    <input type="checkbox" id="numbersEl" >
+                    <label for="numbers"> include numbers</label><br>
+
+                    <input type="checkbox" id="symbolsEl" >
+                    <label for="symbols"> include symbols</label>
+
+                </form>
+            </div>
+            <button type="button" class="" id="generate" onclick="generatePassword()" >Generate Password</button>
+        </div>
         
     </body>
 </html>
