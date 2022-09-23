@@ -1,0 +1,38 @@
+.body{
+    background-image: url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container{
+    display: flexbox;
+    margin: 0 auto;
+    border-width: 5px;
+    background-color: lightblue;
+    width: 900px;
+    height: 500px;
+    background-color: transparent;
+}
+.header{
+    background-color: transparent;
+    text-align: center;
+    width: 900px;
+    margin-top: 100px;
+}
+
+.subcon{
+    background-color: transparent;
+    text-align: center;
+    line-height: normal;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right:5px;
+    width: 200px;
+    height: 100px;
+   
+}
+.subcon h3,h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: white;
+}
