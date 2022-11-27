@@ -10,15 +10,18 @@ function generatePassword(){
 	let passLength = document.getElementById('customRange1').value
 	let charNum = document.getElementById('charNum')
 	let tempPassword="";
-	
-	if (notCapital == true) tempPassword+=lowercase;
-	if(capital == true)  tempPassword+=uppercase;
-	if (numerals == true) tempPassword+=numbers;
-	if (symbolVar == true)  tempPassword+=symbols;
-
 	let passChar = "";
+	
+	// Updating tempPassword based on checkbox
+	if (notCapital == true) tempPassword += lowercase;
+	if(capital == true)  tempPassword += uppercase;
+	if (numerals == true) tempPassword += numbers;
+	if (symbolVar == true)  tempPassword += symbols;
+
+	// Shuffling Password
 	for(i=0;i<passLength;i++) passChar += tempPassword.charAt(Math.floor(Math.random(tempPassword.length)*tempPassword.length));
 	
-	document.getElementById("password").innerText= passChar;
-	document.getElementById('charNum').innerText="Number of Characters: "+ passLength;
+	// Manipulating DOM
+	document.getElementById("password").innerText = passChar;
+	document.getElementById('charNum').innerText = "Number of Characters: " + passLength;
 }
