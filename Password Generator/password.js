@@ -9,16 +9,15 @@ function generatePassword(){
 	let symbolVar = document.getElementById('symbolsEl').checked
 	let passLength = document.getElementById('customRange1').value
 	let charNum = document.getElementById('charNum')
-	let num="";
+	let tempPassword="";
 	
-	if (capital == false && notCapital == false && numerals == false && symbolVar == false) console.log('click buttons down there'); 
-	if (notCapital == true) num+=lowercase;
-	if(capital == true)  num+=uppercase;
-	if (numerals == true) num+=numbers;
-	if (symbolVar == true)  num+=symbols;
+	if (notCapital == true) tempPassword+=lowercase;
+	if(capital == true)  tempPassword+=uppercase;
+	if (numerals == true) tempPassword+=numbers;
+	if (symbolVar == true)  tempPassword+=symbols;
 
 	let passChar = "";
-	for(i=0;i<passLength;i++) passChar+=num.charAt(Math.floor(Math.random(num.length)*num.length));
+	for(i=0;i<passLength;i++) passChar += tempPassword.charAt(Math.floor(Math.random(tempPassword.length)*tempPassword.length));
 	
 	document.getElementById("password").innerText= passChar;
 	document.getElementById('charNum').innerText="Number of Characters: "+ passLength;
