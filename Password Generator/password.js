@@ -19,7 +19,7 @@ function generatePassword(){
 	if (symbolVar == true)  tempPassword += symbols;
 
 	// Shuffling Password
-	for(i=0;i<passLength;i++) passChar += tempPassword.charAt(Math.floor(Math.random(tempPassword.length)*tempPassword.length));
+	for(i=0;i<passLength;i++) passChar += tempPassword.charAt(Math.floor(Math.random()*tempPassword.length));
 	
 	// Manipulating DOM
 	document.getElementById("password").innerText = passChar;
