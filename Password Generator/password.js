@@ -7,7 +7,7 @@ function generatePassword(){
 	let notCapital = document.getElementById('lowercaseEl').checked
 	let numerals = document.getElementById('numbersEl').checked
 	let symbolVar = document.getElementById('symbolsEl').checked
-	let passLength = document.getElementById('customRange1').value
+	let passwordLength = document.getElementById('customRange1').value
 	let charNum = document.getElementById('charNum')
 	let tempPassword="";
 	let password = "";
@@ -19,9 +19,9 @@ function generatePassword(){
 	if(symbolVar == true)  tempPassword += symbols;
 
 	// Shuffling Password
-	for(i=0; i<passLength; i++) password += tempPassword.charAt(Math.floor(Math.random()*tempPassword.length));
+	for(i=0; i<passwordLength; i++) password += tempPassword.charAt(Math.floor(Math.random()*tempPassword.length));
 	
 	// Manipulating DOM
 	document.getElementById("password").innerText = password;
-	document.getElementById('charNum').innerText = "Number of Characters: " + passLength;
+	document.getElementById('charNum').innerText = "Number of Characters: " + passwordLength;
 }
